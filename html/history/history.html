@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>History</title>
+</head>
+<body>
+<div>
+    <a href="#newState">New State</a>
+
+    <h1 onclick="javascript:goBack()">I go backwards</h1>
+    <h1 onclick="javascript:goForward()">I go fordwards</h1>
+    <h1 onclick="javascript:addHistory()">Click me</h1>
+</div>
+<script>
+    function goBack() {
+        window.history.go(-1);
+    }
+    function goForward() {
+        window.history.go(1);
+    }
+    function addHistory() {
+        window.history.pushState(undefined, "", "newsState2")
+    }
+</script>
+</body>
+</html>

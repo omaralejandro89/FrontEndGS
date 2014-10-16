@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <audio controls="">
+            <source src="maid.mp3" type="audio/mpeg">
+            <source src="maid.ogg" type="audio/ogg">
+            Your browser does not support the <code>audio</code> element
+        </audio>
+    </div>
+
+    <script>
+        var audio;
+        window.addEventListener('load', init, false);
+        window.addEventListener('click', playPause, false);
+        function playPause() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function init() {
+            audio = document.getElementsByName('audio')[0];
+            audio.play();
+        }
+    </script>
+</body>
+</html>
